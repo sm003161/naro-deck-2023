@@ -1,0 +1,412 @@
+/* 기본 세팅팅 */
+
+:root {
+    --blue: #1497F1;
+    --light-blue: #E0EEF5;
+    --second-blue: #489AC2;
+    --green: #46C790;
+    --yellow: #FFCC57;
+    --brown: #C4B0A9;
+
+    --black: #333333;
+    --gray: #777777;
+    /* --light-gray: ; */
+    --border-gray: #CFCFCF;
+    --white: #FFFFFF;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    width: 100%;
+    font-size: 16px;
+    color: var(--black);
+    font-family: 'Pretendard', sans-serif;
+    letter-spacing: -0.05rem;
+}
+ol, ul {
+	list-style: none;
+    line-height: initial;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.light-bd-bt {
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.basic-padding {
+    padding: 0.5em 1rem;
+    border-radius: 100px;
+}
+
+.HIDDEN {
+    display: none!important;
+}
+
+
+
+
+
+/* 헤더 */
+
+header > ul {
+    display: flex;
+    background-color: var(--black);
+    color: white;
+}
+
+header > ul > li {
+    padding: 0.625em 1.875rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+header > ul > li.on {
+    background-color: var(--blue);
+}
+
+.gnb {
+    display: grid;
+    grid-template-columns: 25% 1fr 25%;
+    align-items: center;
+    vertical-align: middle;
+    padding: 1.25rem;
+}
+
+.gnb > ul.gnb-menu {
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+    font-size: 1.125rem;
+}
+
+.gnb > ul.gnb-menu > li:hover {
+    background-color: var(--light-blue);
+    color: var(--blue);
+}
+
+.gnb > ul.gnb-menu > li.on {
+    background-color: var(--blue);
+    color: white;
+}
+
+.gnb > div.gnb-menu {
+    display: none;
+}
+
+.gnb > .contact-box > a > .contact {
+    color: white;
+    background-color: var(--green);
+    display: inline-block;
+    font-size: 1.125rem;
+}
+
+.gnb > .contact-box > a > .contact > i {
+    margin-right: 0.625rem;
+    font-size: 0.9375rem;
+}
+
+.gnb > div.contact-box {
+    display: none;
+}
+
+.lnb > ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.lnb > ul > li {
+    padding: 0.625em 0;
+}
+
+.lnb > ul > li.on {
+    border-bottom: 2px solid var(--black);
+}
+
+@media (max-width: 57rem) {
+    header > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    .gnb {
+        grid-template-columns: 1fr repeat(2, auto);
+        padding: 0;
+    }
+
+    .gnb > .logo {
+        padding: 1rem;
+    }
+
+    .gnb > ul.gnb-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        order: 4;
+        grid-column: span 3;
+    }
+
+    .gnb > div.gnb-menu > img,
+    .gnb > div.contact-box > a > img {
+        width: 2.368rem;
+        margin-right: 0.75rem;
+    }
+
+    .gnb > div.gnb-menu,
+    .gnb > div.contact-box {
+        display: inline;
+    }
+
+    .gnb > div.gnb-menu {
+        order: 3;
+    }
+
+    .gnb > span.contact-box {
+        display: none;
+    }
+
+    .gnb > ul > li {
+        display: block;
+        text-align: center;
+        border-radius: 0;
+    }
+}
+
+
+
+/* 푸터 */
+
+footer {
+    width: 100%;
+    background-color: var(--black);
+    padding: 1.875em 0;
+}
+
+.footer-box {
+    max-width: 56.25rem;
+    display: grid;
+    grid-template-columns: 90% 10px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+aside {
+    color: var(--white);
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+aside > span > span {
+    margin-right: 0.625rem;
+}
+
+.footer-bold {
+    color: var(--gray);
+}
+
+.footer-mark > img {
+    width: 4rem;
+    border-radius: 100px;
+}
+
+@media (max-width: 57rem) {
+    footer {
+        padding: 1.25rem;
+    }
+
+    .footer-box {
+        grid-template-columns: 80% 20%;
+    }
+
+    aside {
+        /* width: 70%; */
+    }
+
+}
+
+
+
+
+
+/* 메인 */
+
+.main-body {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(180deg, rgba(143, 0, 255, 0.24) 1.09%, rgba(255, 0, 92, 0.204) 60.41%, rgba(0, 0, 0, 0.15) 100%), url('file:///C:/Users/mkp01/Desktop/KJ/naro-deck/assets/main-img.jpg');
+    background-blend-mode: normal, multiply, normal;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 56.25rem;
+    height: 65%;
+}
+
+.main-copy {
+    color: var(--white);
+    left: 0.625rem;
+    position: relative;
+    line-height: 2.75rem;
+}
+
+.notice-box {
+    color: var(--white);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5em 1fr 5rem;
+    gap: 0.625rem;
+    padding: 0.625em 0.9375rem;
+    border: var(--white) solid 0.0625rem;
+    background: rgba(51, 51, 51, 0.3);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    margin-bottom: 1.875rem;
+}
+
+.notice-latest {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+
+.notice-title > a > i {
+    font-size: 0.75rem;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.quick-menu {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.quick-menu > button {
+    padding: 1.75em 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DFDFDF 100%);
+    border: none;
+    border-right: 0.03125em solid var(--border-gray);
+}
+
+.quick-menu > button > i {
+    font-size: 1.25rem;
+    margin-right: 0.625rem;
+}
+
+.quick-menu > button:nth-child(1) > i {
+    color: var(--blue);
+}
+
+.quick-menu > button:nth-child(2) > i {
+    color: var(--yellow);
+}
+
+.quick-menu > button:nth-child(3) > i {
+    color: var(--second-blue);
+}
+
+.quick-menu > button:nth-child(4) > i {
+    color: var(--brown);
+}
+
+
+
+
+@media (max-width: 57rem) {
+    .main-body {
+        height: 65vh;
+    }
+
+    .main-content {
+        min-width: 100%;
+        padding: 1.25rem;
+        height: 70%;
+    }
+
+    .main-copy {
+        left: 0;
+        line-height: 2rem;
+    }
+    
+    .notice-box {
+        grid-template-columns: 5em minmax(9.375rem, 1fr) 5rem;
+        gap: 0.3125rem;
+    }
+
+    .quick-menu > button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-menu > button > i {
+        font-size: 1.5rem;
+        margin: 0 0 0.625rem 0;
+    }
+}
+
