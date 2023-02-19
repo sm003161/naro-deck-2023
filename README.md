@@ -110,6 +110,14 @@ element 가 block 타입이어야 한다.
 
 ```js
 if (window.screen.width >= 1083) {
-  //
+  
 }
+```
+
+# 230220
+### 1. PHP 파일 include 하기
+```php
+  <?php
+    include("filename.php");
+  ?>
 ```

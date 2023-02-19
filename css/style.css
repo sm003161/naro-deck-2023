@@ -1,4 +1,4 @@
-/* 기본 세팅팅 */
+/* 기본 세팅 */
 
 :root {
     --blue: #1497F1;
@@ -28,9 +28,11 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ul, li,
+ol, 
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption,
+/* tbody, tfoot, thead, tr, th, td, */
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -41,6 +43,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	line-height: 1.625rem;
 }
 
 a {
@@ -54,7 +57,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
     width: 100%;
     font-size: 16px;
     color: var(--black);
@@ -89,6 +91,15 @@ table {
 
 .HIDDEN {
     display: none!important;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+.container-lg {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -166,11 +177,12 @@ header > ul > li.on {
 }
 
 .lnb > ul > li {
-    padding: 0.625em 0;
+    padding: 0.5rem 0;
 }
 
 .lnb > ul > li.on {
     border-bottom: 2px solid var(--black);
+    font-weight: 700;
 }
 
 @media (max-width: 1083px) {
@@ -285,7 +297,7 @@ aside > span > span {
 .main-body {
     width: 100%;
     height: 85vh;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(180deg, rgba(143, 0, 255, 0.24) 1.09%, rgba(255, 0, 92, 0.204) 60.41%, rgba(0, 0, 0, 0.15) 100%), url('file:///C:/Users/HEEJAE_SEO/Desktop/KJ/naro-deck-2023/assets/main-img.jpg');
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(180deg, rgba(143, 0, 255, 0.24) 1.09%, rgba(255, 0, 92, 0.204) 60.41%, rgba(0, 0, 0, 0.15) 100%), url('/assets/main-img.jpg');
     background-blend-mode: normal, multiply, normal;
     background-size: cover;
     position: relative;
@@ -406,3 +418,117 @@ aside > span > span {
     }
 }
 
+
+
+
+
+/* map */
+
+.map > .row > .map-address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.map > .row > .map-address {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.map > .row > .map-address > .contact {
+    display: inline-block;
+    border: 0.1rem solid var(--border-gray);
+}
+
+.map > .row > .map-address > .contact > i {
+    font-size: 13px;
+    margin-right: 0.5rem;
+    color: var(--black);
+}
+
+.map > .row > .map-address > .contact > span {
+    color: var(--green);
+    margin-left: 0.5rem;
+}
+
+.map > .row > .map-address > .contact,
+.map > .row > .map-address > button {
+    border: 0.1rem solid var(--border-gray);
+    width:  250px;
+}
+
+.map > .row > .map-address > button {
+    background-color:#5ECC69;
+    border: none;
+    letter-spacing: -0.05rem;
+    color: var(--white);
+}
+
+.map > .row > .map-address > button > span {
+    color: var(--white);
+    margin-right: 0.5rem;
+}
+
+.map > .row > .map-address > button:last-child {
+    background-color: #FAE64D;
+    color: var(--black);
+}
+
+.map > .row > .map-address > button:last-child > span {
+    color: #1497F1;
+}
+
+.map > .row > .map-map {
+    padding: 0.5rem;
+    border: 1px solid var(--border-gray);
+}
+
+.map > table {
+    line-height: 1.625rem;
+}
+
+.map > table * {
+    color: var(--black);
+}
+
+.map > .row > .map-map > div {
+    height: 400px;
+}
+
+
+@media (max-width: 992px) {
+    .map > .row {
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+/* 전망 */
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery > div {
+    border: 0.1rem solid var(--black);
+}
+
+.gallery > div > .carousel-inner > .carousel-item > .carousel-caption {
+    background-color: white;
+    position: inherit;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+    padding: 0.3125rem 0.5rem;
+    color: var(--black);
+    text-align: left;
+    font-weight: 700;
+}
