@@ -1,44 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css">
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
-    <link href="fontawesome/css/brands.css" rel="stylesheet">
-    <link href="fontawesome/css/solid.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>형제섬 데크</title>
-</head>
-<body>
 <?php
+    $currentMainNav = '갤러리';
+    $currentPage = '오시는 길';
+
     include("header.php");
+    // include("lnb.php");
 ?>
-    <section class="gallery container-lg">
-        <div id="carouselExampleCaptions" class="carousel slide col-lg-6">
-            <div class="carousel-inner col-lg-6">
-                <div class="carousel-item active col-lg-6">
-                    <div class="carousel-caption d-none d-md-block">
-                        <span>사진 1</span>
+
+
+<section class="container-lg gallery">
+    <div class="row justify-content-lg-center">
+        <div class="col-lg-7">
+            <div id="carouselExampleIndicators" class="carousel slide"  data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 1</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
                     </div>
-                        <img src="assets/main-img.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 2</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 3</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 4</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 5</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 6</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item__container">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="carousel-item__container__caption">
+                                    <span>사진 7</span>
+                                </div>
+                                <img src="assets/main-img.jpg" alt="Hills" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            <div class="carousel-item col-lg-6">
-                <div class="carousel-caption d-none d-md-block">
-                        <span>사진 2</span>
-                    </div>
-                        <img src="assets/main-img.jpg" class="d-block w-100" alt="...">
+
+                <!-- Prev & Next -->
+                <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Thumbnails -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators"  style="width: 5rem;" class="active" data-bs-slide-to="0" aria-label="Slide 0" aria-current="true">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style="width: 5rem;" data-bs-slide-to="1" aria-label="Slide 1">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style="width: 5rem;" data-bs-slide-to="2" aria-label="Slide 2">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style="width: 5rem;" data-bs-slide-to="3" aria-label="Slide 3">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style="width: 5rem;" data-bs-slide-to="4" aria-label="Slide 4">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style="width: 5rem;" data-bs-slide-to="5" aria-label="Slide 5">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style="width: 5rem;" data-bs-slide-to="6" aria-label="Slide 6">
+                        <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+                    </button>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-            </button>
+
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="assets/main-img.jpg" alt="Hills" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+<?php
+    include("footer.php");
+?>
+
+
+<script>
+    const myCarouselElement = document.querySelector('#carouselExampleIndicators')
+
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 500000,
+        wrap: true
+    })
+
+    const myCarouselIndicator = document.querySelector
+</script>

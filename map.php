@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css">
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
-    <link href="fontawesome/css/brands.css" rel="stylesheet">
-    <link href="fontawesome/css/solid.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>형제섬 데크</title>
-</head>
-<body>
 <?php
+    $currentMainNav = '소개';
+    $currentPage = '오시는 길';
+
     include("header.php");
+    // include("lnb.php");
 ?>
+
+    
+
+
     <section class="map container-lg">
         <h3 class="fs-4 fw-bold text-center">자가용 이용 시</h3>
         <div class="row">
@@ -39,20 +32,20 @@
     <section class="map container-lg">
         <h3 class="fs-4 fw-bold text-center">대중교통 이용 시</h3>
         <table class="table border-top">
-            <tr class="">
+            <tr>
                 <th class="col-lg-3 text-center align-middle table-secondary">버스</th>
                 <td>고흥버스터미널까지 연결되는 고속·직행버스 : 센트럴시티[서울]에서 하루 4회 운행<br />고흥버스터미널까지 연결되는 시외[완행]버스 : 광주, 순천, 여수<br />※ 위 지역 외 출발 시 '순천터미널' 까지 오신 후 순천터미널에세 고흥행 버스를 이용하세요.</td>
             </tr>
-            <tr class="">
+            <tr>
                 <th class="col-lg-3 text-center align-middle table-secondary">기차</th>
-                <td class="">전라도 순천역[KTX]역에서 순천터미널까지 택시[택시이동거리 1.5km]로 이동하신 후 고흥행 버스를 이용하세요.</td>
+                <td>전라도 순천역[KTX]역에서 순천터미널까지 택시[택시이동거리 1.5km]로 이동하신 후 고흥행 버스를 이용하세요.</td>
             </tr>
-            <tr class="">
+            <tr>
                 <th class="col-lg-3 text-center align-middle table-secondary">항공</th>
                 <td>여수공항에서 순천터미널까지 택시[택시이동거리 18.5km]로 이동하신 후 고흥행 버스를 이용하세요.</td>
             </tr>
-            <tr class="">
-                <th class="col-lg-3 text-center align-middle table-secondary">고흥버스터미널에서</th>
+            <tr>
+                <th class="col-lg-3 text-center align-middle table-secondary">고흥공용<br/>버스터미널에서</th>
                 <td>
                     <ol>
                         <li>택시 - 고흥버스터미널 도착 후 택시 이용[이동거리 25.5km] 요금은 약 22,500원</li>
@@ -64,8 +57,64 @@
     </section>
 
     
+<div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+  <!-- slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/main-img.jpg" alt="Hills">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/main-img.jpg" alt="Hills">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/main-img.jpg" alt="Hills">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/main-img.jpg" alt="Hills">
+    </div>
+  </div>
+
+  <!-- Left right -->
+  <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#custCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+  <!-- Thumbnails -->
+  <ol class="carousel-indicators list-inline">
+    <li class="list-inline-item active">
+      <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+        <img src="assets/main-img.jpg" class="img-fluid">
+      </a>
+    </li>
+
+    <li class="list-inline-item">
+      <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
+        <img src="assets/main-img.jpg" class="img-fluid">
+      </a>
+    </li>
+
+    <li class="list-inline-item">
+      <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
+        <img src="assets/main-img.jpg"  class="img-fluid">
+      </a>
+    </li>
+
+      <li class="list-inline-item">
+      <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel">
+        <img src="assets/main-img.jpg"  class="img-fluid">
+      </a>
+    </li>
+    </ol>
+</div>
+
+
+
 <?php
     include("footer.php");
 ?>
-</body>
-</html>
