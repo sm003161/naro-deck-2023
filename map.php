@@ -1,9 +1,9 @@
 <?php
-    $currentMainNav = '소개';
-    $currentPage = '오시는 길';
+  $currentMainNav = '소개';
+  $currentPage = '오시는 길';
 
-    include("header.php");
-    // include("lnb.php");
+  include("header.php");
+  // include("lnb.php");
 ?>
 
     

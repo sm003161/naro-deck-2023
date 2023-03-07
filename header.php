@@ -32,7 +32,7 @@
         <ul class="gnb-menu">
             <li class="basic-padding"><a href="map.php">소개</a></li>
             <li class="basic-padding"><a href="view.php">갤러리</a></li>
-            <li class="basic-padding"><a href="">데크</a></li>
+            <li class="basic-padding"><a href="deck.php">데크</a></li>
             <li class="basic-padding"><a href="">예약</a></li>
             <li class="basic-padding"><a href="">공지사항</a></li>
         </ul>
