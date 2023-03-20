@@ -13,7 +13,7 @@
       <div class="tools">
         <div class="notice-box">
             <span class="notice-title fw-normal fs-6">
-              <a href="">공지사항 <i class="fa-solid fa-chevron-right"></i></a>
+              <a href="notice.php">공지사항 <i class="fa-solid fa-chevron-right"></i></a>
             </span>
             <a href=""><div class="notice-latest fw-lighter fs-6">숯불그릴 가격인상 안내 숯불그릴 가격인상 안내</div></a>
             <span class="notice-date text-end  fw-lighter fs-6">22-08-15</span>

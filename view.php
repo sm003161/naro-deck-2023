@@ -1,9 +1,8 @@
 <?php
   $currentMainNav = '갤러리';
-  $currentPage = '오시는 길';
+  $currentPage = '전망';
 
   include("header.php");
-  // include("lnb.php");
 ?>
 
 

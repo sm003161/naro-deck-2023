@@ -1,10 +1,11 @@
+
 const gnbShowBtn = document.querySelector("div.gnb-menu");
 const gnbMenu = document.querySelector("ul.gnb-menu");
 const HIDDEN = "HIDDEN"
 
-console.log('page loadded');
 console.log(window.screen.width);
 
+// 모바일 헤더
 
 function checkMobile() {
     if (window.screen.width <= 1083) {
@@ -15,7 +16,6 @@ function checkMobile() {
 
 checkMobile();
 
-
 function HidingClass() {
     gnbMenu.classList.toggle(HIDDEN);
     console.log('button clicked');
@@ -23,5 +23,9 @@ function HidingClass() {
 
 gnbShowBtn.addEventListener("click", HidingClass);
 
+// 현재 GNB 표시하기
+function currentNav() {
+    console.log($currentMainNav);
+}
 
-
+currentNav()

@@ -13,7 +13,10 @@
     <title>형제섬 데크</title>
 </head>
 <body>
-    
+
+
+
+
 <!-- 띠메뉴 -->
     <header>
         <ul class="fw-lighter">
@@ -34,7 +37,7 @@
             <li class="basic-padding"><a href="view.php">갤러리</a></li>
             <li class="basic-padding"><a href="deck.php">데크</a></li>
             <li class="basic-padding"><a href="">예약</a></li>
-            <li class="basic-padding"><a href="">공지사항</a></li>
+            <li class="basic-padding"><a href="notice.php">공지사항</a></li>
         </ul>
         <div class="gnb-menu">
             <img src="assets/icon/button-hamburger.png" alt="메뉴">
@@ -53,34 +56,46 @@
         <ul>
 <?php
     // LNB 메뉴를 배열에 담기
-    $mainNav = array(
-        '메인' => '/index.php',
-        '소개' => '/greeting.php',
-        '갤러리' => '/view.php',
-        '데크' => '/deck.php',
-        '예약' => '/reservation.php',
-        '공지사항' => '/notice.php',
+    $greeting = array(
+        '인삿말' => '/greeting.php',
+        '오시는길' => '/map.php'
     );
 
-    $greeting = array(
-        '소개' => '/greeting.php',
-        '오시는 길' => '/map.php'
+    $gallery = array(
+        '전망' => '/view.php',
+        '부대시설' => '/view.php'
+    );
+
+    $deck = array(
+        '데크배치도' => '/deck.php',
+        '데크미리보기' => '/deck_one.php'
+    );
+
+    $community = array(
+        '공지사항' => '/notice.php',
+        '문의하기' => '/qna.php'
     );
 
     // LNB 메뉴를 뿌려주기
     if ($currentMainNav === '메인') {
         echo '';
-    } else if ($currentMainNav === $mainNav) {
-        echo $mainNav;
-        // foreach ($currentPage as $name => $currentPage) {
-        //     print '<li'.(($currentPage === $name) ? ' class="on" ': '').'><a href="'.$urls.'" >'.$name.'</a></li>';
-        
-    } 
-
-    // LNB 메뉴를 뿌려주기
-    // foreach ($urls as $name => $urls) {
-    //     print '<li'.(($currentPage === $name) ? ' class="on" ': '').'><a href="'.$urls.'" >'.$name.'</a></li>';
-    // }
+    } else if ($currentMainNav === '소개') {
+        foreach ($greeting as $name => $urls) {
+            print '<li'.(($currentPage === $name) ? ' class="on" ': '').'><a href="'.$urls.'" >'.$name.'</a></li>';
+        }
+    } else if ($currentMainNav === '갤러리') {
+        foreach ($gallery as $name => $urls) {
+            print '<li'.(($currentPage === $name) ? ' class="on" ': '').'><a href="'.$urls.'" >'.$name.'</a></li>';
+        }
+    } else if ($currentMainNav === '데크') {
+        foreach ($deck as $name => $urls) {
+            print '<li'.(($currentPage === $name) ? ' class="on" ': '').'><a href="'.$urls.'" >'.$name.'</a></li>';
+        }
+    } else if ($currentMainNav === '커뮤니티') {
+        foreach ($community as $name => $urls) {
+            print '<li'.(($currentPage === $name) ? ' class="on" ': '').'><a href="'.$urls.'" >'.$name.'</a></li>';
+        }
+    }
 ?>
         </ul>
     </nav>
