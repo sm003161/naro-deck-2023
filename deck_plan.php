@@ -11,7 +11,7 @@
 
 <div class="deck-plan__layout">
   <img src="assets/map-img.png" alt="데크배치도" class="rounded">
-  <a href="deck_one.php">
+  <a href="deck_preview.php">
     <span class="badge deck-plan__layout--badge">1</span>
   </a>
 </div>

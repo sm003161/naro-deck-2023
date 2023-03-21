@@ -2,24 +2,26 @@
 
 :root {
   --blue: #1497F1;
-  --light-blue: #E0EEF5;
+  --lighter-blue: #DFF4FF;
+  --light-blue: #B7e6ff;
   --second-blue: #489AC2;
   --green: #46C790;
   --yellow: #FFCC57;
   --brown: #C4B0A9;
 
   --black: #333333;
-  --gray: #777777;
-  --border-gray: #cecece;
-  --off-white: #FAFAFA;
+  --gray: #999999;
+  --light-gray: #B0B0B0;
+  --border-gray: #CECECE;
+  --off-white: #F3F3F3;
   --white: #FFFFFF;
 }
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+  v2.0 | 20110126
+  License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -105,6 +107,10 @@ button {
   display: none!important;
 }
 
+i {
+  margin-right: 0.5rem;
+}
+
 h3 {
   margin-bottom: 1rem;
   font-weight: 600;
@@ -113,7 +119,6 @@ h3 {
 
 h4 > i {
   color: var(--gray);
-  margin-right: 0.5rem;
 }
 
 h4 {
@@ -147,7 +152,7 @@ th {
   justify-content: center;
   align-items: center;
   gap: 0.875rem;
-  background-color: var(--light-blue);
+  background-color: var(--lighter-blue);
   border-radius: 0.5rem;
   margin: 0 0 1rem 0;
   }
@@ -216,7 +221,7 @@ header > ul > a.on {
 }
 
 .gnb > ul.gnb-menu > li:hover {
-  background-color: var(--light-blue);
+  background-color: var(--lighter-blue);
   color: var(--blue);
   font-weight: bold;
 }
@@ -796,65 +801,224 @@ button.cta > i {
 
 
 /* 커뮤니티 */
+.community > div.community__list-form {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
 
-.community-notice > .search-form {
+.community > table > thead > tr.community__view_title-row > * {
+  padding: 1rem 0.5rem;
+}
+
+.community > table > thead > tr.community__view_title-row > th.community__view_title {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.community > div.community__list-form > button,
+.community > table > tbody > tr > td.community__view_modify-group > button,
+.community > table > tfoot > tr > td.community__view_button-group > button {
+  border-radius: 10rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-gray);
+  margin: 0 0.2rem;
+}
+
+.community > div.community__list-form > .btn-primary,
+.community > table > tbody > tr > td.community__view_modify-group > .btn-primarary {
+  font-weight: 600;
+  background-color: white;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.community > div.community__list-form > .btn-primary:active,
+.community > table > tbody > tr > td.community__view_modify-group > .btn-primarary:active {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.community > div.community__list-form > .btn-secondary,
+.community > table > tbody > tr > td.community__view_modify-group > .btn-secondary {
+  font-weight: 600;
+  color: var(--blue);
+  background-color: var(--lighter-blue);
+  border: 1px solid var(--lighter-blue);
+}
+
+.community > div.community__list-form > .btn-delete,
+.community > table > tbody > tr > td.community__view_modify-group > .btn-delete {
+  font-weight: 600;
+  color: var(--black);
+  background-color: var(--off-white);
+  border: 1px solid var(--off-white);
+}
+
+.community > table > tbody > tr > td.community__view_modify-group {
+  text-align: end;
+  border-top: none;
+}
+
+.community > table > tfoot > tr > td.community__view_button-group {
+  text-align: center;
+  border-bottom: none;
+}
+
+.community > div.community__list-form > .search-form {
   display: inline-flex;
   border: 1px solid var(--border-gray);
   border-radius: 100px;
-  padding: 0 0.5rem;
+  padding: 0.1rem 0.5rem;
   float: right;
-  margin-bottom: 2rem;
 }
 
-.community-notice > .search-form > * {
+.community > div.community__list-form > .search-form > select,
+.community > div.community__list-form > .search-form > button,
+.community > div.community__list-form > .search-form > input {
   border: none;
   background-color: transparent;
 }
 
-.community-notice > .search-form > .form-control {
+
+.community > div.community__list-form > .search-form > button > i {
+  margin-right: 0;
+}
+
+.community > div.community__list-form > .search-form > select.form-select {
+  width: 40%;
+}
+
+.community > div.community__list-form > .search-form > input.form-control::placeholder {
+  color: var(--border-gray);
+}
+
+.community > div.community__list-form > .search-form > select.form-select,
+.community > div.community__list-form > .search-form > input.form-control {
   letter-spacing: -0.05rem;
 }
 
-.community-notice > .search-form > button > i {
+.community > div.community__list-form > .search-form > button > i {
   color: var(--blue);
 }
 
-.community-notice > .search-form > button:hover {
-  color: inherit;
-}
-
-.community-notice > .search-form > *:focus,
-.community-notice > .search-form > *:active {
+.community > div.community__list-form > .search-form > button:hover,
+.community > div.community__list-form > .search-form > *:focus,
+.community > div.community__list-form > .search-form > *:active {
   background-color: transparent;
   box-shadow: none;
+  color: var(--black);
 }
 
-.community-notice > table > tbody > tr > td {
-  padding: 1.25rem;
+.community > div.community__list-form > .search-form > ul.dropdown-menu > li > a.dropdown-item:active {
+  background-color: var(--blue);
 }
 
-.community-notice > table > tbody > tr > td.title {
-  text-decoration: underline;
+.community > nav > ul > li > a {
+  padding: 0.4rem 1rem;
+}
+
+.community > table > thead {
+  width: 100%;
+  text-align: center;
+}
+
+.community > table > thead > tr > th {
+  min-width: 3rem;
+}
+
+.community > table > thead > tr > th.community_title {
   text-align: left;
 }
 
-.community-notice > table > tbody > tr:hover {
+.community > table > thead > tr > th.info {
+  text-align: right;
+  
+}
+
+.community > table > tbody > tr > td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 1.3rem 0.5rem;
+  line-height: 1.3rem;
+}
+
+.community > table > tbody > tr > td.community_title {
+  text-decoration: underline;
+  text-align: left;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.community > table > tbody > tr.community_list:hover {
   background-color: var(--off-white);
 }
 
-.community-notice > nav > ul > li > a {
-  padding: 0.4rem 1rem;
+.community > table > thead > tr > .community__view_info {
+  text-align: right;
+  font-weight: 300;
+  min-width: 5rem;
 }
+
+.community > table > thead > tr > th.community__view_info > span {
+  margin-right: 0.5rem;
+}
+
+.community > table > tbody > tr > td.community__view_content {
+  text-align: left;
+  color: var(--black);
+  border-bottom: none;
+}  
+
+.community > nav > ul > li > .page-link {
+  color: var(--blue);
+}
+
+.community > nav > ul > li.active > .page-link, .page-link.active {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
 
 
 
 @media (max-width: 1083px) {
-  .community-notice > .search-form {
+  .community > div.community__list-form > button > i {
+    margin-right: 0;
+  }
+
+  .community button {
+    padding: 1% 5%;
+  }
+
+  .community > div.community__list-form > .search-form {
     width: 100%;
   }
 
-  .community-notice > table > thead > tr > th.title,
-  .community-notice > table > tbody > tr > td.title {
+  .community > div.community__list-form > .search-form > * {
+    padding: 2% 4%;
+  }
+
+  .community > table > thead > tr > th.community_title,
+  .community > table > tbody > tr > td.community_title {
     text-align: center;
+  }
+
+  .community > table > thead > tr.community__view_title-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .community > table > thead > tr.community__view_title-row > th.community__view_title {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .community > table > thead > tr.community__view_title-row > th.community__view_info {
+    padding-top: 0;
+    text-align: left;
   }
 }

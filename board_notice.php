@@ -6,30 +6,29 @@
 ?>
 
 
-<section class="container-lg community-notice">
-  <div class="col-sm-4 search-form">    
-    <input type="text" class="form-control" aria-label="" placeholder="검색어를 입력하세요">
-    <button class="btn btn-outline-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+<section class="container-lg community">
+  <div class="community__list-form">
+    <div class="col-md-5 search-form">
+      <input type="text" class="form-control" aria-label="" placeholder="공지사항 검색하기">
+      <button class="btn btn-outline-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
   </div>
 
   <table class="table border-top align-middle">
     <thead>
-      <th class="col-sm-2 text-center mr-3">번호</th>
-      <th class="col title">제목</th>
-      <th class="col-sm-2 text-center">게시일</th>
+      <tr class="table-light">
+        <th class="col-md-2">번호</th>
+        <th class="col community_title">제목</th>
+        <th class="col-md-2">작성일</th>
+      </tr>
     </thead>
 
     <tbody>
-        <tr>
-          <td class="text-center">2</td>
-          <td class="title"><a href="#">숯불그릴 가격인상 안내</a></td>
-          <td class="text-center">2022-08-15</td>
-        </tr>
-        <tr>
-          <td class="text-center">1</td>
-          <td class="title"><a href="#">객실 기준정원 및 최대정원 조정(22년6월1일 시행)</a></td>
-          <td class="text-center">2022-08-15</td>
-        </tr>
+      <tr class="community__list">
+        <td>1</td>
+        <td class="community_title"><a href="board_view.php">숯불그릴 가격인상 안내</a></td>
+        <td>22-08-15</td>
+      </tr>
     </tbody>
   </table>
 

@@ -22,7 +22,7 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <div>
+      <div class="col-sm-12">
         <h4><i class="fa-solid fa-list"></i> 기본정보</h4>
         <table class="table border-top">
           <tbody>
@@ -55,8 +55,9 @@
         </table>
       </div>
 
+      <div class="mb-4"></div>
 
-      <div>
+      <div class="col-sm-12">
         <h4><i class="fa-regular fa-credit-card"></i> 가격정보</h4>
         <table class="table border-top">
           <thead class="text-center align-middle table-light">
@@ -80,8 +81,7 @@
       </div>
     </div>
 
-
-
+    <div class="mb-4"></div>
 
     <div class="col-sm-6">
       <h4><i class="fa-regular fa-image"></i> 미리보기</h4>
