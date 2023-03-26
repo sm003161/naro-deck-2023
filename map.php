@@ -1,13 +1,19 @@
 <?php
   $currentMainNav = '소개';
+  $currentMainNavEng = 'greeting';
   $currentPage = '오시는길';
 
   include("header.php");
+
+  echo "<div class=\"heading-box\">
+    <div class=\"heading-box--bg heading-box--".$currentMainNavEng."\"></div>
+    <h1>".$currentPage."</h1>
+  </div>";
 ?>
 
 
 <section class="map container-lg">
-  <h3 class="fs-4">자가용 이용 시</h3>
+  <h3>자가용 이용 시</h3>
   <div class="row">
     <div class="map-address col-lg-6 align-middle text-center">
       <div class="text-center">전남 고흥군 동일면 우주로 2464-3</div>
@@ -22,12 +28,10 @@
       </div>
     </div>
   </div>
-</section>
 
 <div class="m-5"></div>
 
-<section class="map container-lg">
-  <h3 class="fs-4">대중교통 이용 시</h3>
+  <h3>대중교통 이용 시</h3>
   <table class="table border-top">
     <tr>
       <th class="col-lg-3 text-center align-middle table-light">버스</th>

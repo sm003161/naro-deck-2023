@@ -80,7 +80,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-  /* font-size: 100%!important; */
 }
 
 button {
@@ -95,7 +94,7 @@ button {
 /* 공통 커스텀 컴포넌츠 */
 
 .light-bd-bt {
-  border-bottom: 1px solid var(--border-gray);
+  border-bottom: 0.5px solid var(--border-gray);
 }
 
 .basic-padding {
@@ -111,10 +110,55 @@ i {
   margin-right: 0.5rem;
 }
 
+div.heading-box {
+  height: 5rem;
+  position: relative;
+}
+
+div.heading-box--bg {
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  height: 100%;
+}
+
+div.heading-box--greeting {
+  background-image: url('/assets/images/bgimage-greeting.jpg');
+}
+
+div.heading-box--gallery {
+  background-image: url('/assets/images/bgimage-gallery.jpg');
+}
+
+div.heading-box--deck {
+  background-image: url('/assets/images/bgimage-deck.jpg');
+}
+
+div.heading-box--reservation {
+  background-image: url('/assets/images/bgimage-reservation.jpg');
+}
+
+div.heading-box--board {
+  background-image: url('/assets/images/bgimage-board.jpg');
+}
+
+h1 {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 h3 {
   margin-bottom: 1rem;
   font-weight: 600;
   text-align: center;
+  font-size: 1.3rem;
 }
 
 h4 > i {
@@ -137,16 +181,16 @@ th {
   max-width: 56.25rem;
 }
 
-.click-me--mo {
+.description--mo {
   display: none;
 }
 
-.click-me--mo > span {
+.description--mo > span {
   text-align: left;
 }
 
-.click-me--pc > span,
-.click-me--mo > span {
+.description > span,
+.description--mo > span {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -155,29 +199,29 @@ th {
   background-color: var(--lighter-blue);
   border-radius: 0.5rem;
   margin: 0 0 1rem 0;
-  }
+}
 
-.click-me--pc > span > i,
-.click-me--mo > span > i {
+.description > span > i,
+.description--mo > span > i {
   font-size: 0.875rem;
   color: #1497F1;
-  }
+}
 
-  .click-me--mo > span > i {
-    font-size: 1.25rem;
-    }
-
-.container-lg {
-  padding: 0 1rem;
+.description--mo > span > i {
+  font-size: 1.25rem;
 }
 
 
 @media (max-width: 576px) {
-  .click-me--pc {
+  body {
+    font-size: 105%;
+  }
+
+  .deck-plan > .description {
     display: none;
   }
 
-  .click-me--mo {
+  .description--mo {
     display: initial;
   }
 }
@@ -220,21 +264,25 @@ header > ul > a.on {
   font-size: 1.125rem;
 }
 
+.gnb > ul.gnb-menu > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1.1rem;
+}
+
 .gnb > ul.gnb-menu > li:hover {
   background-color: var(--lighter-blue);
   color: var(--blue);
   font-weight: bold;
+  border-radius: 100px;
 }
 
 .gnb > ul.gnb-menu > li.on {
   background-color: var(--blue);
   color: white;
-}
-
-.gnb > ul.gnb-menu > li > a {
-  display: block;
-  width: 100%;
-  height: 100%;
+  border-radius: 100px;
+  font-weight: bold;
 }
 
 .gnb > div.gnb-menu {
@@ -269,7 +317,7 @@ header > ul > a.on {
 }
 
 .lnb > ul > li.on {
-  border-bottom: 2px solid var(--black);
+  border-bottom: 3px solid var(--black);
   font-weight: 700;
 }
 
@@ -294,7 +342,7 @@ header > ul > a.on {
     position: absolute;
     z-index: 10;
     left: 0;
-    top: 107px;
+    top: 106.5px;
     border-bottom: 1px solid var(--border-gray);
   }
 
@@ -324,6 +372,14 @@ header > ul > a.on {
   .gnb > ul > li {
     display: block;
     text-align: center;
+    border-radius: 0;
+  }
+
+  .gnb > ul.gnb-menu > li.on {
+    border-radius: 0;
+  }
+
+  .gnb > ul.gnb-menu > li:hover {
     border-radius: 0;
   }
 }
@@ -386,8 +442,9 @@ aside > span > span {
 .main-body {
   width: 100%;
   height: 85vh;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(180deg, rgba(143, 0, 255, 0.24) 1.09%, rgba(255, 0, 92, 0.204) 60.41%, rgba(0, 0, 0, 0.15) 100%), url('/assets/main-img.jpg');
-  background-blend-mode: normal, multiply, normal;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(180deg, rgba(143, 0, 255, 0.24) 1.09%, rgba(255, 0, 92, 0.204) 60.41%, rgba(0, 0, 0, 0.15) 100%), url('/assets/images/main-img.jpg');
+  background-blend-mode: multiply;
   background-size: cover;
   position: relative;
   display: flex;
@@ -420,7 +477,7 @@ aside > span > span {
   padding: 0.625em 0.9375rem;
   border: var(--white) solid 0.0625rem;
   background: rgba(51, 51, 51, 0.3);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(100px);
   border-radius: 10px;
   margin-bottom: 1.875rem;
 }
@@ -445,9 +502,9 @@ aside > span > span {
 
 .quick-menu > button {
   padding: 1.75em 0;
-  background-color: linear-gradient(180deg, #FFFFFF 0%, #DFDFDF 100%);
+  box-shadow: inset 0px -5px 0px var(--border-gray);
   border: none;
-  border-right: 0.1rem solid var(--border-gray);
+  border-right: 0.05rem solid var(--gray);
 }
 
 .quick-menu > button > i {
@@ -474,7 +531,7 @@ aside > span > span {
 
 @media (max-width: 1083px) {
   .main-body {
-    height: 70vh;
+    height: 80vh;
   }
 
   .main-content {
@@ -506,6 +563,16 @@ aside > span > span {
   }
 }
 
+
+
+
+
+/* 소개 */
+
+.greeting > p {
+  text-align: center;
+  padding: 0 1.5rem;
+}
 
 
 
@@ -628,23 +695,11 @@ aside > span > span {
   margin: 1rem;
   line-height: 0;
   padding: 0;
+  background-color: white;
 }
 
 .gallery > .row > div > div.carousel > .carousel-inner > .carousel-item > .carousel-item__container > button:hover {
   height: auto;
-  /* background-image: url('/assets/icon/button-search.png'); */
-}
-
-.gallery > .row > div > div.carousel > .carousel-inner > .carousel-item > .carousel-item__container > button > .carousel-item__container__caption {
-  background-color: white;
-  position: inherit;
-  right: inherit;
-  bottom: inherit;
-  left: inherit;
-  padding: 0.3125rem 0.5rem;
-  color: var(--black);
-  text-align: left;
-  font-weight: 700;
 }
 
 .gallery > .row > div > div.carousel > .carousel-inner > .carousel-item > .carousel-item__container > button > img {
@@ -725,9 +780,6 @@ aside > span > span {
 
 
 /* 데크배치도 */
-.deck-plan {
-  /* padding: 0; */
-}
 
 .deck-plan > .deck-plan__layout {
   width: 100%;
@@ -752,11 +804,49 @@ aside > span > span {
   border: 0.1rem solid white;
 }
 
+.deck-plan > .deck-plan__layout > div.slide-me {
+  display: none;
+}
+
+@media (max-width: 1083px) {
+  .deck-plan > .deck-plan__layout > div.slide-me {
+    display: initial;
+    position: absolute;
+    top: 40%;
+    color: white;
+    font-size: 5rem;
+    opacity: 0%;
+    animation: loop 2s infinite;
+    animation-iteration-count: 3;
+  }
+
+  @keyframes loop{
+    0%{
+      right: 30%;
+      opacity: 0%;
+    }
+    40%{
+      right: 30%;
+      opacity: 80%;
+    }
+    75% {
+      right: 60%;
+      opacity: 50%;
+    }
+    100% {
+      right: 60%;
+      opacity: 0%;
+    }
+  }
+}
+
+
 
 
 
 
 /* 데크미리보기 */
+
 button.cta {
   background-image: linear-gradient(-45deg, #8551e0 -0.02%, #1497F1 100%);
   mix-blend-mode: normal;
@@ -775,11 +865,11 @@ button.cta > i {
   margin-right: 0.5rem;
 }
 
-.deck-preview > .row > .indicator {
+.deck-preview > .deck-indicator > .indicator__arrow {
   color: var(--black);
 }
 
-.deck-preview > .row > div > div> table > caption {
+.deck-preview > .deck-info > div > div> table > caption {
   text-align: right;
 }
 
@@ -796,78 +886,94 @@ button.cta > i {
   margin-bottom: 5rem;
 }
 
+@media (max-width:1083px) {
+  .deck-preview > .deck-info {
+    gap: 1rem;
+  }
+
+  .deck-preview .gallery > .row > div > div.carousel > .carousel-inner > .carousel-item > .carousel-item__container {
+    width: 100%;
+  }
+
+  .deck-preview .gallery > .row > div > .carousel > .carousel-indicators {
+    width: 100%;
+  }
+}
 
 
 
 
-/* 커뮤니티 */
-.community > div.community__list-form {
+
+/* 게시판 */
+
+.board > div.board__list-form {
   margin-bottom: 2rem;
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
 }
 
-.community > table > thead > tr.community__view_title-row > * {
+.board > table > thead > tr.board-view__title-row > * {
   padding: 1rem 0.5rem;
 }
 
-.community > table > thead > tr.community__view_title-row > th.community__view_title {
+.board > table > thead > tr.board-view__title-row > th.board-view__title {
   text-align: left;
   font-size: 18px;
   font-weight: 700;
 }
 
-.community > div.community__list-form > button,
-.community > table > tbody > tr > td.community__view_modify-group > button,
-.community > table > tfoot > tr > td.community__view_button-group > button {
+.board > div.board__list-form > button,
+.board > table > tbody > tr > td.board__view_modify-group > button,
+.board > table > tfoot > tr > td.board__view_button-group > button {
   border-radius: 10rem;
   padding: 0.4rem 1rem;
   border: 1px solid var(--border-gray);
   margin: 0 0.2rem;
 }
 
-.community > div.community__list-form > .btn-primary,
-.community > table > tbody > tr > td.community__view_modify-group > .btn-primarary {
+.board > div.board__list-form > .btn-primary,
+.board > table > tbody > tr > td.board__view_modify-group > .btn-primarary {
   font-weight: 600;
   background-color: white;
   border: 1px solid var(--blue);
   color: var(--blue);
 }
 
-.community > div.community__list-form > .btn-primary:active,
-.community > table > tbody > tr > td.community__view_modify-group > .btn-primarary:active {
+.board > div.board__list-form > .btn-primary:active,
+.board > table > tbody > tr > td.board__view_modify-group > .btn-primarary:active {
   background-color: var(--blue);
   border: 1px solid var(--blue);
+  color: white;
 }
 
-.community > div.community__list-form > .btn-secondary,
-.community > table > tbody > tr > td.community__view_modify-group > .btn-secondary {
+.board > div.board__list-form > .btn-secondary,
+.board > table > tbody > tr > td.board__view_modify-group > .btn-secondary {
   font-weight: 600;
   color: var(--blue);
   background-color: var(--lighter-blue);
   border: 1px solid var(--lighter-blue);
 }
 
-.community > div.community__list-form > .btn-delete,
-.community > table > tbody > tr > td.community__view_modify-group > .btn-delete {
+.board > div.board__list-form > .btn-delete,
+.board > table > tbody > tr > td.board__view_modify-group > .btn-delete {
   font-weight: 600;
   color: var(--black);
   background-color: var(--off-white);
   border: 1px solid var(--off-white);
 }
 
-.community > table > tbody > tr > td.community__view_modify-group {
+.board > table > tbody > tr > td.board__view_modify-group {
   text-align: end;
   border-top: none;
 }
 
-.community > table > tfoot > tr > td.community__view_button-group {
+.board > table > tfoot > tr > td.board__view_button-group {
   text-align: center;
   border-bottom: none;
 }
 
-.community > div.community__list-form > .search-form {
+.board > div.board__list-form > .search-form {
   display: inline-flex;
   border: 1px solid var(--border-gray);
   border-radius: 100px;
@@ -875,108 +981,105 @@ button.cta > i {
   float: right;
 }
 
-.community > div.community__list-form > .search-form > select,
-.community > div.community__list-form > .search-form > button,
-.community > div.community__list-form > .search-form > input {
+.board > div.board__list-form > .search-form > select,
+.board > div.board__list-form > .search-form > button,
+.board > div.board__list-form > .search-form > input {
   border: none;
   background-color: transparent;
 }
 
 
-.community > div.community__list-form > .search-form > button > i {
+.board > div.board__list-form > .search-form > button > i {
   margin-right: 0;
 }
 
-.community > div.community__list-form > .search-form > select.form-select {
+.board > div.board__list-form > .search-form > select.form-select {
   width: 40%;
 }
 
-.community > div.community__list-form > .search-form > input.form-control::placeholder {
+.board > div.board__list-form > .search-form > input.form-control::placeholder {
   color: var(--border-gray);
 }
 
-.community > div.community__list-form > .search-form > select.form-select,
-.community > div.community__list-form > .search-form > input.form-control {
+.board > div.board__list-form > .search-form > select.form-select,
+.board > div.board__list-form > .search-form > input.form-control {
   letter-spacing: -0.05rem;
 }
 
-.community > div.community__list-form > .search-form > button > i {
+.board > div.board__list-form > .search-form > button > i {
   color: var(--blue);
 }
 
-.community > div.community__list-form > .search-form > button:hover,
-.community > div.community__list-form > .search-form > *:focus,
-.community > div.community__list-form > .search-form > *:active {
+.board > div.board__list-form > .search-form > button:hover,
+.board > div.board__list-form > .search-form > *:focus,
+.board > div.board__list-form > .search-form > *:active {
   background-color: transparent;
   box-shadow: none;
   color: var(--black);
 }
 
-.community > div.community__list-form > .search-form > ul.dropdown-menu > li > a.dropdown-item:active {
-  background-color: var(--blue);
-}
-
-.community > nav > ul > li > a {
+.board > nav > ul > li > a {
   padding: 0.4rem 1rem;
 }
 
-.community > table > thead {
+.board > table > thead {
   width: 100%;
   text-align: center;
 }
 
-.community > table > thead > tr > th {
+.board > table > thead > tr > th {
   min-width: 3rem;
 }
 
-.community > table > thead > tr > th.community_title {
+.board > table > thead > tr > th.board_title {
   text-align: left;
 }
 
-.community > table > thead > tr > th.info {
+.board > table > thead > tr > th.info {
   text-align: right;
   
 }
 
-.community > table > tbody > tr > td {
+.board > table > tbody > tr > td {
   text-align: center;
   vertical-align: middle;
   padding: 1.3rem 0.5rem;
   line-height: 1.3rem;
 }
 
-.community > table > tbody > tr > td.community_title {
+.board > table > tbody > tr > td.board_title {
   text-decoration: underline;
   text-align: left;
   font-weight: 600;
   color: var(--black);
 }
 
-.community > table > tbody > tr.community_list:hover {
-  background-color: var(--off-white);
+.board > table > tbody > tr.board__list:hover {
+  background-color: var(--lighter-blue);
+  cursor: pointer;
 }
 
-.community > table > thead > tr > .community__view_info {
+.board > table > thead > tr > .board-view__title-info {
   text-align: right;
   font-weight: 300;
   min-width: 5rem;
 }
 
-.community > table > thead > tr > th.community__view_info > span {
+.board > table > thead > tr > th.board-view__title-info > span {
   margin-right: 0.5rem;
 }
 
-.community > table > tbody > tr > td.community__view_content {
+.board > table > tbody > tr > td.board__view_content {
   text-align: left;
   color: var(--black);
   border-bottom: none;
 }  
 
-.community > nav > ul > li > .page-link {
+.board > nav > ul > li > .page-link {
   color: var(--blue);
 }
 
-.community > nav > ul > li.active > .page-link, .page-link.active {
+.board > nav > ul > li.active > .page-link, .page-link.active {
   background-color: var(--blue);
   border-color: var(--blue);
   color: white;
@@ -986,38 +1089,38 @@ button.cta > i {
 
 
 @media (max-width: 1083px) {
-  .community > div.community__list-form > button > i {
+  .board > div.board__list-form > button > i {
     margin-right: 0;
   }
 
-  .community button {
+  .board button {
     padding: 1% 5%;
   }
 
-  .community > div.community__list-form > .search-form {
+  .board > div.board__list-form > .search-form {
     width: 100%;
   }
 
-  .community > div.community__list-form > .search-form > * {
+  .board > div.board__list-form > .search-form > * {
     padding: 2% 4%;
   }
 
-  .community > table > thead > tr > th.community_title,
-  .community > table > tbody > tr > td.community_title {
+  .board > table > thead > tr > th.board_title,
+  .board > table > tbody > tr > td.board_title {
     text-align: center;
   }
 
-  .community > table > thead > tr.community__view_title-row {
+  .board > table > thead > tr.board-view__title-row {
     display: flex;
     flex-direction: column;
   }
 
-  .community > table > thead > tr.community__view_title-row > th.community__view_title {
+  .board > table > thead > tr.board-view__title-row > th.board-view__title {
     border-bottom: none;
     padding-bottom: 0;
   }
   
-  .community > table > thead > tr.community__view_title-row > th.community__view_info {
+  .board > table > thead > tr.board-view__title-row > th.board-view__title-info {
     padding-top: 0;
     text-align: left;
   }

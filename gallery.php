@@ -1,12 +1,23 @@
 <?php
   $currentMainNav = '갤러리';
+  $currentMainNavEng = 'gallery';
   $currentPage = '전망';
 
   include("header.php");
+
+  echo "<div class=\"heading-box\">
+    <div class=\"heading-box--bg heading-box--".$currentMainNavEng."\"></div>
+    <h1>".$currentPage."</h1>
+  </div>";
 ?>
 
 
 <section class="container-lg gallery">
+  <div class="description">
+    <span class="basic-padding">
+      <i class="fa-solid fa-magnifying-glass"></i> 사진을 터치하시면 크게 보실 수 있어요.
+    </span>
+  </div>
   <div class="row justify-content-lg-center">
     <div class="col-lg-7">
       <div id="carouselExampleIndicators" class="carousel slide"  data-bs-ride="true">
@@ -15,7 +26,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 1</p>
                   </div>
@@ -27,7 +38,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 2</p>
                   </div>
@@ -39,7 +50,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 3</p>
                   </div>
@@ -51,7 +62,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 4</p>
                   </div>
@@ -63,7 +74,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 5</p>
                   </div>
@@ -75,7 +86,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 6</p>
                   </div>
@@ -87,7 +98,7 @@
             <div class="carousel-item__container">
               <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card">
-                  <img src="assets/main-img.jpg" class="card-img-top" alt="...">
+                  <img src="assets/images/main-img.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <p class="card-text">사진 7</p>
                   </div>
@@ -110,25 +121,25 @@
         <!-- Thumbnails -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" class="active" data-bs-slide-to="0" aria-label="Slide 0" aria-current="true">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
           <button type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide-to="1" aria-label="Slide 1">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
           <button type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide-to="2" aria-label="Slide 2">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
           <button type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide-to="3" aria-label="Slide 3">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
           <button type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide-to="4" aria-label="Slide 4">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
           <button type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide-to="5" aria-label="Slide 5">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
           <button type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide-to="6" aria-label="Slide 6">
-            <img class="d-block rounded" src="assets/main-img.jpg" class="img-fluid" />
+            <img class="d-block rounded" src="assets/images/main-img.jpg" class="img-fluid" />
           </button>
         </div>
       </div>
@@ -145,7 +156,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <img src="assets/main-img.jpg" alt="Hills" />
+              <img src="assets/images/main-img.jpg" alt="Hills" />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 <?php
   $currentMainNav = '메인';
+  $currentMainNavEng = 'main';
   $currentPage = '메인';
   
   include("header.php");
@@ -19,14 +20,14 @@
             <span class="notice-title fw-normal fs-6">
               <a href="board_notice.php">공지사항 <i class="fa-solid fa-chevron-right"></i></a>
             </span>
-            <a href="board_view.php"><div class="notice-latest fw-lighter fs-6">숯불그릴 가격인상 안내 숯불그릴 가격인상 안내</div></a>
-            <span class="notice-date text-end  fw-lighter fs-6">22-08-15</span>
+            <a href="board_view.php"><div class="notice-latest fs-6">숯불그릴 가격인상 안내 숯불그릴 가격인상 안내</div></a>
+            <span class="notice-date text-end fs-6">22-08-15</span>
         </div>
         <div class="quick-menu">
           <button type="button" onclick="location.href='map.php'"><i class="fa-solid fa-map-location-dot"></i>오시는 길</button>
-          <button type="button" onclick="location.href='view.php'"><i class="fa-solid fa-images"></i>갤러리</button>
+          <button type="button" onclick="location.href='gallery.php'"><i class="fa-solid fa-images"></i>갤러리</button>
           <button type="button" onclick="location.href='deck.php'"><i class="fa-solid fa-campground"></i>데크</button>
-          <button type="button" onclick="location.href=''"><i class="fa-solid fa-calendar-plus"></i>예약</button>
+          <button type="button" onclick="location.href='reservation_notice.php'"><i class="fa-solid fa-calendar-plus"></i>예약</button>
         </div>
       </div>
       

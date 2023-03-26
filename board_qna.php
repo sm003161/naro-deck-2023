@@ -1,38 +1,35 @@
 <?php
-  $currentMainNav = '커뮤니티';
-  $currentPage = '문의하기';
+  $currentMainNav = '게시판';
+  $currentMainNavEng = 'board';
+  $currentPage = '문의사항';
 
   include("header.php");
+
+  echo "<div class=\"heading-box\">
+    <div class=\"heading-box--bg heading-box--".$currentMainNavEng."\"></div>
+    <h1>".$currentPage."</h1>
+  </div>";
 ?>
 
 
-<section class="container-lg community">
-  <div class="community__list-form">
-    <button type="button" name="write" onclick="location.href='board_view.php'" class="btn btn-primary write-btn"><i class="fa-solid fa-pen"></i> 문의하기</button>
-    <div class="col-md-5 search-form search-bar">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>제목</option>
-        <option value="1">내용</option>
-        <option value="2">글쓴이</option>
-      </select>
-      <input type="text" class="form-control" aria-label="문의 검색하기" placeholder="문의 검색하기">
-      <button class="btn btn-outline-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
-  </div>
+<section class="container-lg board">
+  <?php include("board_header.php");?>
+
+  <div class="m-4"></div>
 
   <table class="table border-top align-middle">
     <thead>
       <tr class="table-light">
         <th class="col-md-2">번호</th>
-        <th class="col community_title">제목</th>
+        <th class="col board_title">제목</th>
         <th class="col-md-2">작성일</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr class="community__list">
+      <tr class="board__list">
         <td>1</td>
-        <td class="community_title"><a href="board_view.php">숯불그릴 가격인상 안내</a></td>
+        <td class="board_title"><a href="board_view.php">숯불그릴 가격인상 안내</a></td>
         <td>22-08-15<br>서*재</td>
       </tr>
     </tbody>

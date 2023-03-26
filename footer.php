@@ -19,10 +19,15 @@
       </span>
     </aside>
     <span class="footer-mark">
-      <img src="assets/minpak-mark.jpg" alt="민박 마크">
+      <img src="assets/images/minpak-mark.jpg" alt="민박 마크">
     </span>
   </div>
 </footer>
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+
+<!-- 현재 GNB 메뉴에 하이라이트하기 -->
+<script><?php echo 'highlightLi();';?></script>

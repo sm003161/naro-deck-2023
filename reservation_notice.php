@@ -1,7 +1,7 @@
 <?php
-  $currentMainNav = '데크';
-  $currentMainNavEng = 'deck';
-  $currentPage = '데크배치도';
+  $currentMainNav = '예약';
+  $currentMainNavEng = 'reservation';
+  $currentPage = '예약안내';
 
   include("header.php");
 
@@ -11,12 +11,11 @@
   </div>";
 ?>
 
-<section class="container-lg deck-plan text-center">
-<?php
-  include("deck_plan.php");
-?>
-</section>
 
+<section class="container-lg">
+
+
+</section>
 <?php
   include("footer.php");
 ?>
